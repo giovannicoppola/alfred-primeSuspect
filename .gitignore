@@ -4,3 +4,5 @@ __pycache__
 prefs.plist
 lib
 prompt.md
+.claude/settings.local.json
+icons/Gemini_Generated_Image_*.png
