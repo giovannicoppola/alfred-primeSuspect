@@ -47,7 +47,7 @@ correspond to quadratic polynomials like *n² + n + 41* that are unusually rich 
 
 No one has fully explained the pattern, and it ties into some of the deepest open
 questions about how primes are distributed.
-workflow whose whole job is hunting primes.
+
 
 ## License
 
