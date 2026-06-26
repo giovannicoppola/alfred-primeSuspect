@@ -60,6 +60,20 @@ def format_factorization(factors):
             parts.append(f"{base}{str(exp).translate(superscripts)}")
     return " × ".join(parts)
 
+def proper_divisors(factors):
+    """Build the sorted list of divisors (excluding 1 and n) from a factorization.
+
+    Derived from the prime factorization so it stays fast even for large n,
+    instead of trial-dividing every integer up to n / 2.
+    """
+    divisors = [1]
+    for base, exp in factors:
+        powers = [base ** e for e in range(1, exp + 1)]
+        divisors = [d * p for d in divisors for p in [1] + powers]
+    divisors.sort()
+    # Drop 1 (first) and n itself (last) to match the displayed factor list.
+    return divisors[1:-1]
+
 FUN_FACTS = [
     # Basics
     "2 is the smallest prime and the only even prime number.",
@@ -172,7 +186,7 @@ try:
             # Prime factorization + all factors as second row
             pf = prime_factorization(myQuery)
             pf_str = format_factorization(pf)
-            myFactors = [x for x in range(2, int(myQuery / 2) + 1) if myQuery % x == 0]
+            myFactors = proper_divisors(pf)
             myFactorsString = ", ".join(str(n) for n in myFactors)
             items.append({
                 "title": f"🧮 {myQuery:,} = {pf_str}  ({myFactorsString})",
