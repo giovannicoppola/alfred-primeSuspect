@@ -1,7 +1,7 @@
 <div align="center">
   <img src="src/icon.png" width="128" alt="Prime Suspect logo">
   <h1>Prime Suspect</h1>
-  <p>An Alfred workflow that tells you whether a number is prime — and a lot more if it isn't.</p>
+  <p>Is this number a prime?</p>
 </div>
 
 ## Features
