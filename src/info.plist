@@ -35,7 +35,7 @@
 	<key>createdby</key>
 	<string>giovanni</string>
 	<key>description</key>
-	<string>Check whether a number is prime — and if not, see its closest primes, prime factorization, and divisors.</string>
+	<string>Check whether a number is prime</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -141,16 +141,14 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Prime Suspect
+	<string># Prime Suspect
 
 Type the keyword (default @@) followed by a number:
 
 • If it's prime, you'll get a confirmation plus a random fun fact about primes.
 • If it's not, you'll see the closest primes above and below it, its prime factorization, and the full list of divisors.
 
-Press ⏎ to copy the result to the clipboard, or ⌥⏎ to show it in large type.
-
-The keyword is configurable in the workflow's user configuration.</string>
+Press ⏎ to copy the result to the clipboard, or ⌥⏎ to show it in large type.</string>
 	<key>uidata</key>
 	<dict>
 		<key>08563D52-5305-484E-9B44-C21546E187D9</key>
@@ -202,7 +200,7 @@ The keyword is configurable in the workflow's user configuration.</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.2</string>
+	<string>0.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/giovannicoppola/alfred-primeSuspect</string>
 </dict>

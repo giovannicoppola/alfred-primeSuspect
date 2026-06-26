@@ -10,7 +10,6 @@ Type the keyword (default `@@`) followed by a number:
 
 - **If it's prime** → confirmation, plus a random fun fact about prime numbers.
 - **If it's not** → the closest primes above and below it, its prime factorization (e.g. `360 = 2³ × 3² × 5`), and the full list of divisors.
-- **Not a number** → a friendly nudge to enter a valid integer.
 
 Press <kbd>⏎</kbd> to copy the result to the clipboard, or <kbd>⌥</kbd><kbd>⏎</kbd> to show it in large type.
 
@@ -34,19 +33,6 @@ Press <kbd>⏎</kbd> to copy the result to the clipboard, or <kbd>⌥</kbd><kbd>
 
 The trigger keyword can be changed in the workflow's user configuration in Alfred.
 
-## Development
-
-The workflow source lives in [`src/`](src/):
-
-- `primeChecker.py` — the script filter logic (no third-party dependencies)
-- `info.plist` — the Alfred workflow definition
-- `icon.png` — the workflow icon
-
-To test the script directly:
-
-```bash
-python3 src/primeChecker.py 17
-```
 
 ## About the icon
 
@@ -60,7 +46,7 @@ scatter randomly: many of them lined up along **diagonal streaks**. Those diagon
 correspond to quadratic polynomials like *n² + n + 41* that are unusually rich in primes.
 
 No one has fully explained the pattern, and it ties into some of the deepest open
-questions about how primes are distributed — which felt like a fitting emblem for a
+questions about how primes are distributed.
 workflow whose whole job is hunting primes.
 
 ## License
