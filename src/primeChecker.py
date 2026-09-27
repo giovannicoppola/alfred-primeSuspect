@@ -138,7 +138,17 @@ FUN_FACTS = [
 items = []
 
 try:
-    myQuery = int(sys.argv[1])
+    myQuery = int(sys.argv[1]) if len(sys.argv) > 1 else None
+    if myQuery is None:
+        raise ValueError("empty")
+    if abs(myQuery) > 10**12:
+        items.append({
+            "title": "Number too large",
+            "subtitle": "Enter an integer up to 1 trillion — huge values hang the checker",
+            "valid": False
+        })
+        print(json.dumps({"items": items}))
+        raise SystemExit(0)
 
     if is_prime(myQuery):
         myTitle = f"💫 {myQuery:,} is a prime number!"
